@@ -7,6 +7,7 @@ round = 1
 
 while(round <= total_rounds):
     secret_number = 42
+    print("Tentativa {} de {}".format(round, total_rounds))
     kick_str = input('Digite o seu número: ')
 
     print('Você digitou', kick_str)
@@ -25,5 +26,5 @@ while(round <= total_rounds):
             print("Você errou! O seu chute foi menor que o número secreto")
 
     print("Final do Jogo")
-    
+
     round = round + 1
