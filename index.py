@@ -19,6 +19,7 @@ for round in range (1, total_rounds + 1) :
 
     if (hit):
         print("Você acertou!")
+        break
     else:
         if(highest):
             print("Você errou! O seu chute foi maior que o número secreto")
