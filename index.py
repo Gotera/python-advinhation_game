@@ -4,11 +4,23 @@ print('*******************')
 print('Jogo de advinhação')
 print('*******************')
 
-total_rounds = random.randrange(1,101)
+secret_number = random.randrange(1,101)
+total_rounds = 0
 round = 1
 
+print('Escolha o nível de dificuldade:')
+print('(1) Fácil (2) Médio (3) Difícil')
+
+nivel = int(input('Qual dificuldade você escolhe?: '))
+
+if (nivel == 1):
+    total_rounds = 20
+elif(nivel == 2):
+    total_rounds = 10
+else:
+    total_rounds = 5
+
 for round in range (1, total_rounds + 1) :
-    secret_number = 42
     print("Tentativa {} de {}".format(round, total_rounds))
     kick_str = input('Digite o seu número: ')
 
