@@ -103,7 +103,7 @@ def request_guess():
     guess = guess.strip().upper()
     return guess
 
-def filter_kick(guess, known_letters, secret_word):
+def filter_guess(guess, known_letters, secret_word):
     index = 0
     for letter in secret_word:
         if(guess == letter):
@@ -121,9 +121,9 @@ def play():
     
     print(known_letters)
     while(not hanged and not hit):
-        kick = request_guess()
-        if(kick in secret_word):
-           filter_kick(kick, known_letters, secret_word)
+        guess = request_guess()
+        if(guess in secret_word):
+           filter_guess(guess, known_letters, secret_word)
         else:
             errors += 1
             draw_gallow(errors)
